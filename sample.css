@@ -3,7 +3,4 @@ body { background-color:lightgrey; }
 #MyPic { height:100px ; width:100px; float:right}
 table { border:1px solid green; border-collapse:collapse; }
 th,td { border:1px solid green; padding:5px; }
-header
-{
-color:green;font-family:verdana; font-size:150%; text-align:center; border:2px solid green; padding:5px; margin:15px;
-}
+h1 { border:2px solid green; padding:5px; margin:15px; }
