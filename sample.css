@@ -1,4 +1,4 @@
-body { background-color:lightgrey; }
+body { background-color:lightgrey; background-image:url("background.jpg"); background-attachment:fixed;}
 #id1:hover { color:green; }
 #MyPic { height:100px ; width:100px; float:right}
 
@@ -11,10 +11,14 @@ border:1px solid green;
 padding:5px; }
 
 h1 {  
-border:2px solid green; 
+border:3px solid green;
+border-style:dashed; 
 padding:5px; 
 margin:15px; 
 color:green; 
 font-family:verdana; 
 font-size:150%; 
 text-align:center; }
+
+textarea { float:left; }
+
