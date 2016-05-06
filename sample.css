@@ -1,7 +1,11 @@
 body { background-color:lightgrey; background-image:url("background.jpg"); background-attachment:fixed;}
 #id1:hover { color:green; }
 #MyPic { height:100px ; width:100px; float:right}
-
+input.input_name:focus { background-color:lightgreen; }
+ul { list-style-type: none; margin:0px; padding:0px; overflow: hidden;}
+li a { text-decoration:none; text-align:center; display:inline-block; 
+padding:4px 4px 6px 4px; }
+li { float:left; }
 table { 
 border:1px solid green; 
 border-collapse:collapse; }
@@ -10,6 +14,12 @@ th,td {
 border:1px solid green; 
 padding:5px; }
 
+#QualTable { overflow-x: auto; }
+
+tr:nth-child(odd) { background-color:#aaaaaa; }
+tr:nth-child(even) { background-color:rgb(62, 227, 236); }
+td:hover { background-color:#ab238f}
+th:hover { background-color:#ab238f}
 h1 {  
 border:3px solid green;
 border-style:dashed; 
