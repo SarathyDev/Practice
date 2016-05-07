@@ -2,8 +2,9 @@ body { background-color:lightgrey; background-image:url("background.jpg"); backg
 #id1:hover { color:green; }
 #MyPic { height:100px ; width:100px; float:right}
 input.input_name:focus { background-color:lightgreen; }
-ul { list-style-type:none; margin:0px; padding:0px; }
-li { display:inline; }
+ul { list-style-type:none; margin:0px; padding:2px; }
+li { display:inline; border-right:1px solid #fff; }
+li:last-child { border:none; }
 li a { text-decoration:none; text-align:center; padding:4px 4px 6px 4px; }
 li a.active { background-color:#4CAF50; color:white; }
 li a:hover:not(.active) { background-color:#4CAF50; color:white; }
