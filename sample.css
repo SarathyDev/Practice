@@ -5,6 +5,8 @@ input.input_name:focus { background-color:lightgreen; }
 ul { list-style-type: none; margin:0px; padding:0px; overflow: hidden;}
 li a { text-decoration:none; text-align:center; display:inline-block; 
 padding:4px 4px 6px 4px; }
+li a.active { background-color: #4CAF50; color:white; }
+li a:hover:not(.active) { background-color: #4CAF50; color:white; }
 li { float:left; }
 table { 
 border:1px solid green; 
