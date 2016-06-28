@@ -11,11 +11,20 @@
 </head>
 <body id="home">
 <h1> HTML practice page </h1>
-<ul id="menu">
+<ul>
 	<li><a class="active" href="file:///Users/Sarathy/Documents/HTML/Practice.html">Home</a></li>
 	<li><a href="#Aboutme">About me</a></li>
 	<li><a href="#Profiles">Profiles</a></li>
-	<li><a href="#Contact">Contact</a></li>
+	<li style="border:none"><a href="#Contact">Contact</a></li>
+	<li style="float:right"><a href="#Navigation" class="dropdown">Menu</a></li>
+</ul>
+<ul>
+	<div class="dropdown-content">
+		<li><a class="active" href="file:///Users/Sarathy/Documents/HTML/Practice.html">Home</a></li>
+		<li><a href="#Aboutme">About me</a></li>
+		<li><a href="#Profiles">Profiles</a></li>
+		<li><a href="#Contact">Contact</a></li>
+	</div>
 </ul>
 <p>Click on the picture to visit my 
 <a id="id1" href = "https://www.linkedin.com/in/bala-krishna-sarathy-71aa344b" target="_blank">LinkedIn page</a>.
@@ -46,8 +55,8 @@ alt="My LinkedIn profile picture" title="Link to my LinkedIn page"></a>
 First Name : <input class = "input_name" type="text" name="firstname" maxlength="20" placeholder="First Name"></input><br />
 Last Name  : <input class = "input_name" type="text" name="lastname" maxlength="20" placeholder="Last Name"></input>
 <select name="Qualification">
-<option value = "Bs">Bs</option>
-<option value = "Ms" selected="selected">Ms</option>
+<option value = "Bs">BE</option>
+<option value = "Ms" selected="selected">MS</option>
 </select><br />
 <textarea name="Comments" rows="1" cols="10">This is just FYI</textarea>
 <input type = "Submit"></button>

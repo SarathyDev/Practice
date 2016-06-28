@@ -3,13 +3,16 @@ body { background :lightgrey url("background.jpg") fixed; } /*shorthand property
 h1 {  border:solid green 3px; padding:5px; margin:15px; 
 color:green; font-family:verdana; font-size:150%; text-align:center; } 
 #MyPic { height:100px ; max-width:100px; float:right}
-input.input_name:focus { background-color:lightgreen; }
+
 ul { list-style-type:none; margin:0px; padding:2px; }
-li { display:inline; border-right:1px solid #fff; }
+li { display:inline; border-right:1px solid #fff;}
 li:last-child { border:none; }
 li a { text-decoration:none; text-align:center; padding:4px 4px 6px 4px; }
-li a.active { background-color:#4CAF50; color:white; }
-li a:hover:not(.active) { background-color:#4CAF50; color:white; }
+li a:active { background-color:#4CAF50; color:white; }
+li a:visited {color:darkgreen; font-style: bold;}
+li a:hover { background-color:#4CAF50; color:white; }
+.dropdown-content {display:none;}
+
 table { 
 border:1px solid green; 
 border-collapse:collapse; }
@@ -26,3 +29,4 @@ td:hover { background-color:#ab238f}
 th:hover { background-color:#ab238f}
 fieldset { display:inline; }
 textarea { float:left; }
+input.input_name:focus { background-color:lightgreen; }
