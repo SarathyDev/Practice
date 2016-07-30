@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>Dropdown</title>
+    <meta http-equiv="refresh" content="10">
+    <style>
+        body {
+            background-color: rgb(128, 128, 128);
+        }
+        
+        .dropdown1 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            padding: 10px 10px 10px 10px;
+            min-width: 150px;
+            z-index: 1;
+        }
+        
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+        /*   RIGHT ALIGNED DROPDOWN  */
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            float: right;
+        }
+        
+        .dropdownbtn {
+            background-color: lightgreen;
+            font-size: 16px;
+            padding: 12px 12px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            border: 1px solid lightgreen;
+            width: 98%;
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 8px 8px;
+            text-decoration: none;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: lightgreen;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* NAVIGATION DROPDOWN */
+        
+        ul {
+            list-style-type: none;
+            margin: 2px;
+            padding: 2px;
+        }
+        
+        li {
+            display: inline-block;
+            border-right: 1px solid #fff;
+            padding: 2px;
+        }
+        
+        li:last-child {
+            border-right: none;
+        }
+        
+        li a {
+            text-decoration: none;
+            text-align: center;
+            padding: 4px 4px 6px 4px;
+        }
+        
+        li a:active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        li a:visited {
+            color: darkgreen;
+            font-style: bold;
+        }
+        
+        li a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hover over the text below to see the dropdown</p>
+    <span class="dropdown1">This is a Dropdown.
+    <span class="dropdown-content1"><p>I am a Dropdown</p></span>
+    </span>
+    <ul>
+        <li><a href=#>Home</a></li>
+        <li><a href=#>About</a></li>
+        <li><a href=#>Contact</a></li>
+        <li><a href=#>Locations</a></li>
+        <li><a href=#>Navigation</a></li>
+    </ul>
+
+    <div class="dropdown">
+        <button class="dropdownbtn">Dropdown Menu</button>
+        <div class="dropdown-content">
+            <a href=#>Home</a>
+            <a href=#>About</a>
+            <a href=#>Contact</a>
+            <a href=#>Locations</a>
+        </div>
+    </div>
+</body>
+
+</html>
