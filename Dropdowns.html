@@ -75,7 +75,7 @@
             padding: 2px;
         }
         
-        li:last-child {
+        .ddown {
             border-right: none;
         }
         
@@ -99,6 +99,24 @@
             background-color: #4CAF50;
             color: white;
         }
+        
+        .d-content {
+            display:none;
+            position:absolute;
+            margin:4px 0px;
+	        border:1px solid lightgreen;
+            width:auto;
+        }
+
+        .d-content a {
+            display:block;
+            padding:8px 8px;
+            text-decoration:none;
+        }
+
+        .ddown:hover .d-content {
+            display:block;
+        }
     </style>
 </head>
 
@@ -112,7 +130,14 @@
         <li><a href=#>About</a></li>
         <li><a href=#>Contact</a></li>
         <li><a href=#>Locations</a></li>
-        <li><a href=#>Navigation</a></li>
+        <li class="ddown"><a href=#>Navigation</a>
+            <div class="d-content">
+                <a href=#>Home</a>
+                <a href=#>About</a>
+                <a href=#>Contact</a>
+                <a href=#>Locations</a>
+            </div>
+        </li>
     </ul>
 
     <div class="dropdown">
