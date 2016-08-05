@@ -7,60 +7,6 @@
         body {
             background-color: rgb(128, 128, 128);
         }
-        
-        .dropdown1 {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown-content1 {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            padding: 10px 10px 10px 10px;
-            min-width: 150px;
-            z-index: 1;
-        }
-        
-        .dropdown1:hover .dropdown-content1 {
-            display: block;
-        }
-        /*   RIGHT ALIGNED DROPDOWN  */
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            float: right;
-        }
-        
-        .dropdownbtn {
-            background-color: lightgreen;
-            font-size: 16px;
-            padding: 12px 12px;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            border: 1px solid lightgreen;
-            width: 98%;
-        }
-        
-        .dropdown-content a {
-            display: block;
-            padding: 8px 8px;
-            text-decoration: none;
-        }
-        
-        .dropdown-content a:hover {
-            background-color: lightgreen;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
         /* NAVIGATION DROPDOWN */
         
         ul {
@@ -75,7 +21,7 @@
             padding: 2px;
         }
         
-        .ddown {
+        .dropdown {
             border-right: none;
         }
         
@@ -100,38 +46,92 @@
             color: white;
         }
         
-        .d-content {
-            display:none;
-            position:absolute;
-            margin:4px 0px;
-	        border:1px solid lightgreen;
-            width:auto;
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            margin: 4px 0px;
+            border: 1px solid lightgreen;
+            width: auto;
+            background-color: rgb(128, 128, 128);
         }
-
-        .d-content a {
-            display:block;
-            padding:8px 8px;
-            text-decoration:none;
+        
+        .dropdown-content a {
+            display: block;
+            padding: 8px 8px;
+            text-decoration: none;
+            z-index: 2;
         }
-
-        .ddown:hover .d-content {
-            display:block;
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*   RIGHT ALIGNED DROPDOWN  */
+        
+        .dropdown2 {
+            position: relative;
+            display: inline-block;
+            float: right;
+        }
+        
+        .dropdownbtn2 {
+            background-color: lightgreen;
+            font-size: 16px;
+            padding: 12px 12px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            border: 1px solid lightgreen;
+            width: 98%;
+        }
+        
+        .dropdown-content2 a {
+            display: block;
+            padding: 8px 8px;
+            text-decoration: none;
+            z-index: 2;
+        }
+        
+        .dropdown-content2 a:hover {
+            background-color: lightgreen;
+        }
+        
+        .dropdown2:hover .dropdown-content2 {
+            display: block;
+        }
+        /* TEXT DROPDOWN */
+        
+        .dropdown3 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content3 {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            padding: 10px 10px 10px 10px;
+            min-width: 150px;
+            z-index: 1;
+        }
+        
+        .dropdown3:hover .dropdown-content3 {
+            display: block;
         }
     </style>
 </head>
 
 <body>
-    <p>Hover over the text below to see the dropdown</p>
-    <span class="dropdown1">This is a Dropdown.
-    <span class="dropdown-content1"><p>I am a Dropdown</p></span>
-    </span>
     <ul>
         <li><a href=#>Home</a></li>
         <li><a href=#>About</a></li>
         <li><a href=#>Contact</a></li>
         <li><a href=#>Locations</a></li>
-        <li class="ddown"><a href=#>Navigation</a>
-            <div class="d-content">
+        <li class="dropdown"><a href=#>Navigation</a>
+            <div class="dropdown-content">
                 <a href=#>Home</a>
                 <a href=#>About</a>
                 <a href=#>Contact</a>
@@ -140,15 +140,20 @@
         </li>
     </ul>
 
-    <div class="dropdown">
-        <button class="dropdownbtn">Dropdown Menu</button>
-        <div class="dropdown-content">
+    <div class="dropdown2">
+        <button class="dropdownbtn2">Dropdown Menu</button>
+        <div class="dropdown-content2">
             <a href=#>Home</a>
             <a href=#>About</a>
             <a href=#>Contact</a>
             <a href=#>Locations</a>
         </div>
     </div>
+
+    <p>Hover over the text below to see the dropdown</p>
+    <span class="dropdown3">This is a Dropdown.
+    <span class="dropdown-content3"><p>I am a Dropdown</p></span>
+    </span>
 </body>
 
 </html>
