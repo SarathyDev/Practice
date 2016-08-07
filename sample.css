@@ -6,15 +6,21 @@ body {
         #id1:hover {
             color: green;
         }
-        
+
+        #heading {
+            text-align: center;
+        }
+
         h1 {
             border: solid green 3px;
+            border-radius: 100px;
+            min-width: 500px;
             padding: 5px;
             margin: 15px;
+            display: inline-block;
             color: green;
             font-family: verdana;
             font-size: 150%;
-            text-align: center;
         }
         
         #MyPic {
