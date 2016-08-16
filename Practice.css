@@ -1,146 +1,154 @@
-body {
-            background: lightgrey url("background.jpg") fixed;
-        }
-        /*shorthand property*/
-        
-        #id1:hover {
-            color: green;
-        }
+	body {
+		background: lightgrey url("background.jpg") fixed;
+	}
+	/*shorthand property*/
 
-        #heading {
-            text-align: center;
-        }
-
-        h1 {
-            border: solid green 3px;
-            border-radius: 100px;
-            min-width: 500px;
-            padding: 5px;
-            margin: 15px;
-            display: inline-block;
-            color: green;
-            font-family: verdana;
-            font-size: 150%;
-            transition: min-width 2s;
-        }
-
-        h1:hover {
-            min-width: 1200px;
-        }
-        
-        #MyPic {
-            height: 100px;
-            max-width: 100px;
-            float: right
-        }
-        
-        ul {
-            list-style-type: none;
-            margin: 0px;
-            padding: 2px;
-        }
-        
-        li {
-            display: inline;
-            border-right: 1px solid #fff;
-        }
-        
-        li:last-child {
-            border: none;
-        }
-        
-        li a {
-            text-decoration: none;
-            text-align: center;
-            padding: 4px 4px 6px 4px;
-        }
-        
-        li a:active {
-            background-color: #4CAF50;
-            color: white;
-        }
-        
-        li a:visited {
-            color: darkgreen;
-            font-style: bold;
-        }
-        
-        li a:hover {
-            background-color: #4CAF50;
-            color: white;
-        }
-        
-        #no-border {
-            border: none;
-        }
-        
-        .dropdown {
-            position: relative;
-            float: right;
-            display: inline-block;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            margin: 4px 0px;
-            border: 1px solid lightgreen;
-            min-width: 120px;
-            background-color: rgb(128, 128, 128);
-            right: 0;
-        }
-        
-        .dropdown-content a {
-            display: block;
-            background-color: #f9f9f9;
-            padding: 8px 8px;
-            text-decoration: none;
-            z-index: 2;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        table {
-            border: 1px solid green;
-            border-collapse: collapse;
-        }
-        
-        th,
-        td {
-            border: 1px solid green;
-            padding: 5px;
-        }
-        
-        #QualTable {
-            overflow-x: auto;
-        }
-        
-        tr:nth-child(odd) {
-            background-color: #aaaaaa;
-        }
-        
-        tr:nth-child(even) {
-            background-color: rgb(62, 227, 236);
-        }
-        
-        td:hover {
-            background-color: #ab238f
-        }
-        
-        th:hover {
-            background-color: #ab238f
-        }
-        
-        fieldset {
-            display: inline;
-        }
-        
-        textarea {
-            float: left;
-        }
-        
-        input.input_name:focus {
-            background-color: lightgreen;
-        }
+	#date {
+		float: right;
+        color:green;
+        border: solid 1px green;
+        border-style: dotted;
+	}
+	
+	#link:hover {
+		color: green;
+	}
+	
+	#heading {
+		text-align: center;
+	}
+	
+	h1 {
+		border: solid green 3px;
+		border-radius: 100px;
+		min-width: 500px;
+		padding: 5px;
+		margin: 15px;
+		display: inline-block;
+		color: green;
+		font-family: verdana;
+		font-size: 150%;
+		transition: min-width 2s;
+	}
+	
+	h1:hover {
+		min-width: 1200px;
+	}
+	
+	#MyPic {
+		height: 100px;
+		max-width: 100px;
+		float: right;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0px;
+		padding: 2px;
+	}
+	
+	li {
+		display: inline;
+		border-right: 1px solid #fff;
+	}
+	
+	li:last-child {
+		border: none;
+	}
+	
+	li a {
+		text-decoration: none;
+		text-align: center;
+		padding: 4px 4px 6px 4px;
+	}
+	
+	li a:active {
+		background-color: #4CAF50;
+		color: white;
+	}
+	
+	li a:visited {
+		color: darkgreen;
+		font-style: bold;
+	}
+	
+	li a:hover {
+		background-color: #4CAF50;
+		color: white;
+	}
+	
+	#no-border {
+		border: none;
+	}
+	
+	.dropdown {
+		position: relative;
+		float: right;
+		display: inline-block;
+	}
+	
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		margin: 4px 0px;
+		border: 1px solid lightgreen;
+		min-width: 120px;
+		background-color: rgb(128, 128, 128);
+		right: 0;
+		z-index: 1;
+	}
+	
+	.dropdown-content a {
+		display: block;
+		background-color: #f9f9f9;
+		padding: 8px 8px;
+		text-decoration: none;
+		z-index: 2;
+	}
+	
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	
+	table {
+		border: 1px solid green;
+		border-collapse: collapse;
+	}
+	
+	th,
+	td {
+		border: 1px solid green;
+		padding: 5px;
+	}
+	
+	#QualTable {
+		overflow-x: auto;
+	}
+	
+	tr:nth-child(odd) {
+		background-color: #aaaaaa;
+	}
+	
+	tr:nth-child(even) {
+		background-color: rgb(62, 227, 236);
+	}
+	
+	td:hover {
+		background-color: #ab238f
+	}
+	
+	th:hover {
+		background-color: #ab238f
+	}
+	
+	fieldset {
+		display: inline;
+	}
+	
+	textarea {
+		float: left;
+	}
+	
+	input.input_name:focus {
+		background-color: lightgreen;
+	}
