@@ -4,8 +4,10 @@
 	/*shorthand property*/
 
 	#date {
-		float: right;
-        color:green;
+		position:fixed;
+		bottom: 0px;
+		right: 0px;
+        color:black;
         border: solid 1px green;
         border-style: dotted;
 	}
