@@ -1,15 +1,18 @@
 	body {
 		background: lightgrey url("background.jpg") fixed;
 	}
-	/*shorthand property*/
 
-	#date {
-		position:fixed;
+	.date {
+		position: fixed;
 		bottom: 0px;
 		right: 0px;
         color:black;
         border: solid 1px green;
         border-style: dotted;
+	}
+
+	.date:hover {
+		font-size: 40px;
 	}
 	
 	#link:hover {
