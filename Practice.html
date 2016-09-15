@@ -61,11 +61,11 @@
 	<fieldset>
 		<legend>Name group</legend>
 		<form>
-			First Name : <input class="input_name" type="text" name="firstname" maxlength="20" placeholder="First Name"></input><br
-			/> Last Name : <input class="input_name" type="text" name="lastname" maxlength="20" placeholder="Last Name"></input>
+			First Name : <input class="input_name" type="text" name="firstname" onchange="capitalize()" maxlength="20" placeholder="First Name"></input>
+			<br/> Last Name : <input class="input_name" type="text" name="lastname" onchange="capitalize()" maxlength="20" placeholder="Last Name"></input>
 			<select name="Qualification">
-<option value = "Bs">BE</option>
-<option value = "Ms" selected="selected">MS</option>
+<option value = "BE">BE</option>
+<option value = "MS" selected="selected">MS</option>
 </select><br />
 			<textarea id="Comments" name="Comments" rows="1" cols="10">This is just FYI</textarea>
 			<!--<p id="Commentss">Hello the text is </p>-->
@@ -75,4 +75,5 @@
 	<div class="date"></div>
 	<script src="Practice.js"></script>
 </body>
+
 </html>
