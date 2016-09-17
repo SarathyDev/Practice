@@ -2,7 +2,7 @@
 		background: lightgrey url("background.jpg") fixed;
 	}
 
-	.date {
+	#date {
 		position: fixed;
 		bottom: 0px;
 		right: 0px;
@@ -11,7 +11,7 @@
         border-style: dotted;
 	}
 
-	.date:hover {
+	#date:hover {
 		font-size: 40px;
 	}
 	
