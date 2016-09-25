@@ -154,6 +154,6 @@
 		float: left;
 	}
 	
-	input.input_name:focus {
+	input.inputName:focus {
 		background-color: lightgreen;
 	}
