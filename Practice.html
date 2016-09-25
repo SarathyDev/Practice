@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <head>
 	<link rel="stylesheet" type="text/css" href="Practice.css">
@@ -11,7 +12,7 @@
 	<meta http-equiv="refresh" content="60">
 </head>
 
-<body id="home">
+<body id="home" ng-app="angularApp" ng-init="names=['Sarathy', 'Gautham', 'Arthi']">
 	<div id="heading">
 		<h1> HTML practice page </h1>
 	</div>
@@ -60,17 +61,30 @@
 
 	<fieldset>
 		<legend>Name group</legend>
+		<form name="myForm">
 			First Name : <input class="inputName" type="text" name="firstName" onchange="capitalize()" maxlength="20" placeholder="First Name"
+				ng-model="firstName" required></input>
 			<br/> Last Name : <input class="inputName" type="text" name="lastName" onchange="capitalize()" maxlength="20" placeholder="Last Name"
+				ng-model="lastName" required></input>
 			<select name="Qualification">
-<option value = "BE">BE</option>
-<option value = "MS" selected="selected">MS</option>
-</select><br />
+				<option value = "BE">BE</option>
+				<option value = "MS" selected="selected">MS</option>
+			</select><br />
+			E-mail :<input name="Email" class="inputName" type="email" placeholder="E-mail" ng-model="email"></input>
+			<div ng-show="myForm.Email.$error.email">Not a valid e-mail address</div>
+			<br />
 			<textarea id="Comments" name="Comments" rows="1" cols="10">This is just FYI</textarea>
-			<button type="reset" onclick="changeText()">Reset Text</button>
+			<button type="reset" onclick="changeText()">Reset Text</button><br />
 		</form>
 	</fieldset>
 	<div id="date"></div>
+	<my-directive></my-directive>
+	<div>
+		<span ng-repeat="x in names">
+			{{ x }}
+		</span>
+	</div>
+	<div>I am <span ng-controller="myControl" ng-bind="myName"></span></div>
 	<script src="Practice.js"></script>
 </body>
 
