@@ -12,7 +12,7 @@
 	<meta http-equiv="refresh" content="60">
 </head>
 
-<body id="home" ng-app="angularApp" ng-init="names=['Sarathy', 'Gautham', 'Arthi']">
+<body id="home" ng-app="angularApp">
 	<div id="heading">
 		<h1> HTML practice page </h1>
 	</div>
@@ -34,8 +34,7 @@
 	</ul>
 
 	<p>Click on the picture to visit my
-		<a id="link" href="https://www.linkedin.com/in/bala-krishna-sarathy-71aa344b" target="_blank">LinkedIn page</a>
-	</p>
+		<a id="link" href="https://www.linkedin.com/in/bala-krishna-sarathy-71aa344b" target="_blank">LinkedIn page</a></p>
 	<a href="https://www.linkedin.com/in/bala-krishna-sarathy-71aa344b" target="_blank">
 		<img id="MyPic" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/023/25b/0c9772a.jpg" alt="My LinkedIn profile picture"
 			title="Link to my LinkedIn page"></a>
@@ -69,22 +68,37 @@
 			<select name="Qualification">
 				<option value = "BE">BE</option>
 				<option value = "MS" selected="selected">MS</option>
-			</select><br />
-			E-mail :<input name="Email" class="inputName" type="email" placeholder="E-mail" ng-model="email"></input>
+			</select><br /> E-mail :<input name="Email" class="inputName" type="email" placeholder="E-mail" ng-model="email"></input>
 			<div ng-show="myForm.Email.$error.email">Not a valid e-mail address</div>
 			<br />
 			<textarea id="Comments" name="Comments" rows="1" cols="10">This is just FYI</textarea>
 			<button type="reset" onclick="changeText()">Reset Text</button><br />
 		</form>
 	</fieldset>
-	<div id="date"></div>
-	<my-directive></my-directive>
-	<div>
-		<span ng-repeat="x in names">
-			{{ x }}
+	<br /><br />
+	<my-directive style="display:inline-block"></my-directive>
+	<span ng-controller="nameController">
+		<span ng-repeat="x in nameList">
+			{{x | customFormat}}
 		</span>
+	</span><br /><br />
+	<div ng-controller="tableAngSort">
+		<table>
+			<tr>
+				<th ng-click="orderByMethod('name')">
+					Name
+				</th>
+				<th ng-click="orderByMethod('rollNumber')">
+					RollNo
+				</th>
+			</tr>
+			<tr ng-repeat="z in database | orderBy: selectedOrder ">
+				<td>{{z.name}}</td>
+				<td>{{z.rollNumber}}</td>
+			</tr>
+		</table>
 	</div>
-	<div>I am <span ng-controller="myControl" ng-bind="myName"></span></div>
+	<div id="date"></div>
 	<script src="Practice.js"></script>
 </body>
 
