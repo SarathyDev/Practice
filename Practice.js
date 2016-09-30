@@ -20,10 +20,10 @@ function capitalize() {
     });
     app.filter('customFormat', function() {
         return function(x) {
-            var indexVariable, characs, mytxt = "";
-            for (indexVariable = 0; indexVariable < x.length; indexVariable++) {
-                characs = x[indexVariable];
-                if(indexVariable % 3 == 0) {
+            var counter, characs, mytxt = "";
+            for (counter=0; counter<x.length; counter++) {
+                characs = x[counter];
+                if(counter % 3 == 0) {
                     characs = characs.toUpperCase();
                 }
                 mytxt += characs;
@@ -34,4 +34,7 @@ function capitalize() {
     app.controller('nameController', function($scope) {
         $scope.nameList = ['Sarathy', 'Gautham', 'Arthi', 'Edwin']; 
     });
-    
+    app.controller('timeController', function($scope, $timeout) {
+        $scope.displayText = "HTML practice page";
+        $timeout(function() {$scope.displayText = "Welcome to my practice page"}, 2000);
+    });
