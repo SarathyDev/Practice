@@ -34,7 +34,7 @@ function capitalize() {
     app.controller('nameController', function($scope) {
         $scope.nameList = ['Sarathy', 'Gautham', 'Arthi', 'Edwin']; 
     });
-    app.controller('timeController', function($scope, $timeout) {
+    app.controller('headingTimeController', function($scope, $timeout) {
         $scope.displayText = "HTML practice page";
         $timeout(function() {$scope.displayText = "Welcome to my practice page"}, 2000);
     });
