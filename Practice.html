@@ -96,6 +96,7 @@
 				</th>
 			</tr>
 			<tr ng-repeat="z in database | orderBy: selectedOrder : reverseOrder ">
+				<td>{{$index + 1}}</td>
 				<td>{{z.name}}</td>
 				<td>{{z.rollNumber}}</td>
 				<td>{{z.city}}</td>
