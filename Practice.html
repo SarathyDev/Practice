@@ -91,15 +91,19 @@
 				<th ng-click="orderByMethod('rollNumber')">
 					RollNo
 				</th>
+				<th ng-click="orderByMethod('city')">
+					City
+				</th>
 			</tr>
-			<tr ng-repeat="z in database | orderBy: selectedOrder ">
+			<tr ng-repeat="z in database | orderBy: selectedOrder : reverseOrder ">
 				<td>{{z.name}}</td>
 				<td>{{z.rollNumber}}</td>
+				<td>{{z.city}}</td>
 			</tr>
 		</table>
 	</div>
 
-	<p ng-controller="googleController">{{statuscode}}</p>
+	<p ng-controller="siteController">{{statuscode}}</p>
 	<p ng-controller="timerController">Hello timer is {{"00:" +timer}}</p>
 
 	<div id="date"></div>

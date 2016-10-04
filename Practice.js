@@ -11,12 +11,17 @@ var app = angular.module("angularApp", []);
 app.directive("myDirective", function () { return { template: "<div>These are the names in the list = </div>" }; });
 app.controller("tableAngSort", function ($scope) {
     $scope.database = [
-        { name: 'Sarathy', rollNumber: 9 },
-        { name: 'Arthi', rollNumber: 6 },
-        { name: 'Gautham', rollNumber: 17 },
-        { name: 'Edwin', rollNumber: 16 }
+        { name: 'Sarathy', rollNumber: 9, city: 'Union City' },
+        { name: 'Arthi', rollNumber: 6, city: 'Coimbatore' },
+        { name: 'Gautham', rollNumber: 17, city: 'Union City' },
+        { name: 'Edwin', rollNumber: 16, city: 'Thrissur' },
+        { name: 'Sarangapani', rollNumber: 46, city: 'Chennai' }
     ]
-    $scope.orderByMethod = function (constraint) { $scope.selectedOrder = constraint; };
+    $scope.reverseOrder = false;
+    $scope.orderByMethod = function (constraint) { 
+        $scope.selectedOrder = constraint;
+        ($scope.reverseOrder)?($scope.reverseOrder = false):($scope.reverseOrder = true); 
+    };
 });
 app.filter('customFormat', function () {
     return function (x) {
@@ -38,11 +43,10 @@ app.controller('headingTimeController', function ($scope, $timeout) {
     $scope.displayText = "HTML practice page";
     $timeout(function () { $scope.displayText = "Welcome to my practice page" }, 2000);
 });
-app.controller('googleController', function ($scope, $http) {
+app.controller('siteController', function ($scope, $http) {
 
     $http.get("file:///Users/Sarathy/Documents/HTML/Practice.html")
         .then(function (response) {
-            $scope.content = response.data;
             $scope.statuscode = response.status;
         });
 });
