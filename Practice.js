@@ -9,18 +9,21 @@ function capitalize() {
 }
 var app = angular.module("angularApp", []);
 app.directive("myDirective", function () { return { template: "<div>These are the names in the list = </div>" }; });
+app.controller("degreeController", function ($scope) {
+    $scope.degreeList = ['BE', 'B.Tech', 'BSc', 'MS', 'MSc']
+});
 app.controller("tableAngSort", function ($scope) {
-    $scope.database = [
-        { name: 'Sarathy', rollNumber: 9, city: 'Union City' },
-        { name: 'Arthi', rollNumber: 6, city: 'Coimbatore' },
-        { name: 'Gautham', rollNumber: 17, city: 'Union City' },
-        { name: 'Edwin', rollNumber: 16, city: 'Thrissur' },
-        { name: 'Sarangapani', rollNumber: 46, city: 'Chennai' }
-    ]
+    $scope.database = {
+        Sarathy: { name: 'Sarathy', rollNumber: 9, city: 'Union City' },
+        Arthi: { name: 'Arthi', rollNumber: 6, city: 'Coimbatore' },
+        Gautham: { name: 'Gautham', rollNumber: 17, city: 'Union City' },
+        Edwin: { name: 'Edwin', rollNumber: 16, city: 'Thrissur' },
+        Sarangapani: { name: 'Sarangapani', rollNumber: 46, city: 'Chennai' }
+    }
     $scope.reverseOrder = false;
-    $scope.orderByMethod = function (constraint) { 
+    $scope.orderByMethod = function (constraint) {
         $scope.selectedOrder = constraint;
-        ($scope.reverseOrder)?($scope.reverseOrder = false):($scope.reverseOrder = true); 
+        ($scope.reverseOrder) ? ($scope.reverseOrder = false) : ($scope.reverseOrder = true);
     };
 });
 app.filter('customFormat', function () {
@@ -44,7 +47,6 @@ app.controller('headingTimeController', function ($scope, $timeout) {
     $timeout(function () { $scope.displayText = "Welcome to my practice page" }, 2000);
 });
 app.controller('siteController', function ($scope, $http) {
-
     $http.get("file:///Users/Sarathy/Documents/HTML/Practice.html")
         .then(function (response) {
             $scope.statuscode = response.status;

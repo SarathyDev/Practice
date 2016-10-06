@@ -65,9 +65,8 @@
 				ng-model="firstName" required></input>
 			<br/> Last Name : <input class="inputName" type="text" name="lastName" onchange="capitalize()" maxlength="20" placeholder="Last Name"
 				ng-model="lastName" required></input>
-			<select name="Qualification">
-				<option value = "BE">BE</option>
-				<option value = "MS" selected="selected">MS</option>
+			<select name="Qualification" ng-controller="degreeController">
+				<option ng-repeat="y in degreeList" value="{{y}}">{{y}}</option>
 			</select><br /> E-mail :<input name="Email" class="inputName" type="email" placeholder="E-mail" ng-model="email"></input>
 			<div ng-show="myForm.Email.$error.email">Not a valid e-mail address</div>
 			<br />
@@ -82,9 +81,10 @@
 			{{x | customFormat}}
 		</span>
 	</span><br /><br />
-	<div ng-controller="tableAngSort">
+	<span ng-controller="tableAngSort">
 		<table>
 			<tr>
+				<th></th>
 				<th ng-click="orderByMethod('name')">
 					Name
 				</th>
@@ -102,7 +102,8 @@
 				<td>{{z.city}}</td>
 			</tr>
 		</table>
-	</div>
+		<!--<select ng-model="selectedName" ng-options="z.name for (y,z) in database"></select>-->
+	</span>
 
 	<p ng-controller="siteController">{{statuscode}}</p>
 	<p ng-controller="timerController">Hello timer is {{"00:" +timer}}</p>
