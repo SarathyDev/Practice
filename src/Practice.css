@@ -1,5 +1,5 @@
 	body {
-		background: lightgrey url("background.jpg") fixed;
+		background: lightgrey url("file:///Users/Sarathy/Documents/HTML/img/background.jpg") fixed;
 	}
 
 	#date {
