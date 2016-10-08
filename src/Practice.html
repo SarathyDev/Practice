@@ -63,15 +63,20 @@
 		<form name="myForm">
 			First Name : <input class="inputName" type="text" name="firstName" onchange="capitalize()" maxlength="20" placeholder="First Name"
 				ng-model="firstName" required></input>
+			<span ng-show="myForm.firstName.$error.required">*</span>
 			<br/> Last Name : <input class="inputName" type="text" name="lastName" onchange="capitalize()" maxlength="20" placeholder="Last Name"
 				ng-model="lastName" required></input>
+			<span ng-show="myForm.lastName.$error.required">*</span>
 			<select name="Qualification" ng-controller="degreeController">
 				<option ng-repeat="y in degreeList" value="{{y}}">{{y}}</option>
-			</select><br /> E-mail :<input name="Email" class="inputName" type="email" placeholder="E-mail" ng-model="email"></input>
-			<div ng-show="myForm.Email.$error.email">Not a valid e-mail address</div>
-			<br />
-			<textarea id="Comments" name="Comments" rows="1" cols="10">This is just FYI</textarea>
-			<button type="reset" onclick="changeText()">Reset Text</button><br />
+			</select><br /> E-mail :<input name="Email" class="inputName" type="email" placeholder="E-mail" ng-model="email" required></input>
+			<span
+				ng-show="myForm.Email.$error.required">*</span>
+				<div ng-show="myForm.Email.$error.email">Not a valid e-mail address</div>
+				<br />
+				<textarea id="Comments" name="Comments" rows="1" cols="10">This is just FYI</textarea>
+				<button type="reset" onclick="changeText()">Reset Text</button>
+				<button type="submit">Submit</button><br />
 		</form>
 	</fieldset>
 	<br /><br />
