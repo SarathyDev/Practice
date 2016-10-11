@@ -13,13 +13,13 @@ app.controller("degreeController", function ($scope) {
     $scope.degreeList = ['BE', 'B.Tech', 'BSc', 'MS', 'MSc']
 });
 app.controller("tableAngSort", function ($scope) {
-    $scope.database = {
-        Sarathy: { name: 'Sarathy', rollNumber: 9, city: 'Union City' },
-        Arthi: { name: 'Arthi', rollNumber: 6, city: 'Coimbatore' },
-        Gautham: { name: 'Gautham', rollNumber: 17, city: 'Union City' },
-        Edwin: { name: 'Edwin', rollNumber: 16, city: 'Thrissur' },
-        Sarangapani: { name: 'Sarangapani', rollNumber: 46, city: 'Chennai' }
-    }
+    $scope.database = [
+       { name: 'Sarathy', rollNumber: 9, city: 'Union City' },
+       { name: 'Arthi', rollNumber: 6, city: 'Coimbatore' },
+       { name: 'Gautham', rollNumber: 17, city: 'Union City' },
+       { name: 'Edwin', rollNumber: 16, city: 'Thrissur' },
+       { name: 'Sarangapani', rollNumber: 46, city: 'Chennai' }
+    ]
     $scope.reverseOrder = false;
     $scope.orderByMethod = function (constraint) {
         $scope.selectedOrder = constraint;
