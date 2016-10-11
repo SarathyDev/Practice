@@ -47,7 +47,7 @@ app.controller('headingTimeController', function ($scope, $timeout) {
     $timeout(function () { $scope.displayText = "Welcome to my practice page" }, 2000);
 });
 app.controller('siteController', function ($scope, $http) {
-    $http.get("file:///Users/Sarathy/Documents/HTML/Practice.html")
+    $http.get("file:///Users/Sarathy/Documents/HTML/src/Practice.html")
         .then(function (response) {
             $scope.statuscode = response.status;
         });
