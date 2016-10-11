@@ -82,10 +82,14 @@
 	<br /><br />
 	<my-directive style="display:inline-block"></my-directive>
 	<span ng-controller="nameController">
-		<span ng-repeat="x in nameList">
-			{{x | customFormat}}
-		</span>
-	</span><br /><br />
+		<ul ng-repeat="x in nameList">
+			<li>{{x | customFormat}} <span ng-click="removeName($index)">X</span></li>
+		</ul>
+	<div><input ng-model="newName" type="text"></input>
+	<button ng-click="addName()">Add name</button>
+	<p>{{errorMsg}}</p></div>	
+	</span>
+	<br />
 	<span ng-controller="tableAngSort">
 		<table>
 			<tr>

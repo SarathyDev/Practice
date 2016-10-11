@@ -14,11 +14,11 @@ app.controller("degreeController", function ($scope) {
 });
 app.controller("tableAngSort", function ($scope) {
     $scope.database = [
-       { name: 'Sarathy', rollNumber: 9, city: 'Union City' },
-       { name: 'Arthi', rollNumber: 6, city: 'Coimbatore' },
-       { name: 'Gautham', rollNumber: 17, city: 'Union City' },
-       { name: 'Edwin', rollNumber: 16, city: 'Thrissur' },
-       { name: 'Sarangapani', rollNumber: 46, city: 'Chennai' }
+        { name: 'Sarathy', rollNumber: 9, city: 'Union City' },
+        { name: 'Arthi', rollNumber: 6, city: 'Coimbatore' },
+        { name: 'Gautham', rollNumber: 17, city: 'Union City' },
+        { name: 'Edwin', rollNumber: 16, city: 'Thrissur' },
+        { name: 'Sarangapani', rollNumber: 46, city: 'Chennai' }
     ]
     $scope.reverseOrder = false;
     $scope.orderByMethod = function (constraint) {
@@ -41,6 +41,18 @@ app.filter('customFormat', function () {
 });
 app.controller('nameController', function ($scope) {
     $scope.nameList = ['Sarathy', 'Gautham', 'Arthi', 'Edwin'];
+    $scope.addName = function () { 
+        $scope.errorMsg = "";
+        if(!$scope.newName) {return;}
+        if($scope.nameList.indexOf($scope.newName) == -1) {
+            $scope.nameList.push($scope.newName);
+        }
+        else {$scope.errorMsg = "Name is already in the list"} 
+    };
+    $scope.removeName = function (x) { 
+        $scope.nameList.splice(x, 1);
+        $scope.errorMsg = ""; 
+    }
 });
 app.controller('headingTimeController', function ($scope, $timeout) {
     $scope.displayText = "HTML practice page";
